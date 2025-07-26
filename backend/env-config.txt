@@ -1,0 +1,19 @@
+# Required Environment Variables for FI-Money Backend
+# Copy this content to a .env file in the backend directory
+
+# Database Configuration
+DATABASE_URL=your_neon_database_connection_string_here
+
+# JWT Configuration  
+JWT_SECRET=your_jwt_secret_key_here
+
+# Server Configuration (optional)
+PORT=8080
+NODE_ENV=development
+
+# Instructions:
+# 1. Create a .env file in the backend directory
+# 2. Copy the above variables and replace the placeholder values
+# 3. For DATABASE_URL: Get your Neon database connection string from your Neon dashboard
+# 4. For JWT_SECRET: Generate a secure random string for JWT token signing
+# 5. The dotenv package will automatically load these variables when the app starts 
