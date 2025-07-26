@@ -1,4 +1,4 @@
-# FiMoney
+# Fi-Money
 
 A financial management application built with Node.js, Express, and MongoDB.
 
