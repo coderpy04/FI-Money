@@ -49,25 +49,7 @@ JWT_EXPIRES_IN=7d
 
 ## Usage
 
-### Screenshots
-
-To help with API testing and documentation, this project includes screenshots of each endpoint in action. Screenshots are stored in the `screenshots/` directory and show:
-
-- Request/response examples using tools like Postman or Insomnia
-- Proper header configuration for protected routes
-- Sample request bodies and expected responses
-- Authentication flow demonstration
-
-### Adding Screenshots
-
-1. Create a `screenshots/` directory in your project root
-2. Test each endpoint using an API client (Postman, Insomnia, etc.)
-3. Take screenshots showing:
-   - The endpoint URL and method
-   - Request headers (especially Authorization for protected routes)
-   - Request body (for POST/PUT requests)
-   - Response data
-4. Save screenshots with descriptive names as shown in the project structure Mode
+### Development Mode
 
 To run the application in development mode with auto-restart:
 
@@ -94,12 +76,12 @@ fimoney/
 ├── middleware/        # Custom middleware (authMiddleware)
 ├── models/            # MongoDB models
 ├── controllers/       # Route controllers
-├── screenshots/       # API endpoint screenshots
-│   ├── register-endpoint.png
-│   ├── login-endpoint.png
-│   ├── add-product-endpoint.png
-│   ├── get-products-endpoint.png
-│   └── update-quantity-endpoint.png
+├── Screenshot/        # API endpoint screenshots
+│   ├── register.jpg
+│   ├── login.jpg
+│   ├── postProduct.jpg
+│   ├── getProduct.jpg
+│   └── updateProductById.jpg
 ├── package.json       # Project dependencies and scripts
 ├── .env              # Environment variables (not in repo)
 ├── .gitignore        # Git ignore file
@@ -122,7 +104,7 @@ Register a new user account with email and password.
 }
 ```
 
-![Register Endpoint Screenshot](Screenshot\register.jpg)
+![Register Endpoint Screenshot](Screenshot/register.jpg)
 *Screenshot showing the register endpoint in action*
 
 ---
@@ -138,7 +120,7 @@ Authenticate user and receive JWT token.
 }
 ```
 
-![Login Endpoint Screenshot](Screenshot\login.jpg)
+![Login Endpoint Screenshot](Screenshot/login.jpg)
 *Screenshot showing the login endpoint in action*
 
 ---
@@ -163,7 +145,7 @@ Authorization: Bearer <jwt_token>
 }
 ```
 
-![Add Product Endpoint Screenshot](Screenshot\postProduct.jpg)
+![Add Product Endpoint Screenshot](Screenshot/postProduct.jpg)
 *Screenshot showing the add product endpoint in action*
 
 ---
@@ -176,7 +158,7 @@ Retrieve all products from inventory. Requires authentication.
 Authorization: Bearer <jwt_token>
 ```
 
-![Get Products Endpoint Screenshot](Screenshot\getProduct.jpg)
+![Get Products Endpoint Screenshot](Screenshot/getProduct.jpg)
 *Screenshot showing the get products endpoint in action*
 
 ---
@@ -196,7 +178,7 @@ Authorization: Bearer <jwt_token>
 }
 ```
 
-![Update Product Quantity Screenshot](Screenshot\updateProductById.jpg)
+![Update Product Quantity Screenshot](Screenshot/updateProductById.jpg)
 *Screenshot showing the update product quantity endpoint in action*
 
 ## Environment Variables
@@ -208,9 +190,29 @@ Authorization: Bearer <jwt_token>
 | `JWT_SECRET` | Secret key for JWT tokens | Yes |
 | `JWT_EXPIRES_IN` | Token expiration time | No (default: 7d) |
 
-## Development
+## Screenshots
+
+To help with API testing and documentation, this project includes screenshots of each endpoint in action. Screenshots are stored in the `Screenshot/` directory and show:
+
+- Request/response examples using tools like Postman or Insomnia
+- Proper header configuration for protected routes
+- Sample request bodies and expected responses
+- Authentication flow demonstration
+
+### Adding Screenshots
+
+1. Create a `Screenshot/` directory in your project root
+2. Test each endpoint using an API client (Postman, Insomnia, etc.)
+3. Take screenshots showing:
+   - The endpoint URL and method
+   - Request headers (especially Authorization for protected routes)
+   - Request body (for POST/PUT requests)
+   - Response data
+4. Save screenshots with descriptive names as shown in the project structure
 
 ## Development
+
+### Prerequisites for Development
 
 - Install nodemon globally (optional): `npm install -g nodemon`
 
