@@ -119,7 +119,9 @@ def get_existing_product_id(token):
     
     if res.status_code == 200:
         try:
-            products = res.json()
+            response_data = res.json()
+            # Handle both direct array response and wrapped response
+            products = response_data.get("products") or response_data
             if isinstance(products, list) and len(products) > 0:
                 # Get the first product's ID
                 first_product = products[0]
@@ -153,7 +155,9 @@ def test_update_quantity(token, product_id):
     if passed:
         try:
             response_data = res.json()
-            updated_qty = response_data.get("quantity")
+            # Check if quantity is in nested product object or direct response
+            updated_qty = (response_data.get("quantity") or 
+                          response_data.get("product", {}).get("quantity"))
             if updated_qty != new_quantity:
                 passed = False
         except json.JSONDecodeError:
@@ -176,7 +180,9 @@ def test_get_products(token):
     passed = res.status_code == 200
     if passed:
         try:
-            products = res.json()
+            response_data = res.json()
+            # Handle both direct array response and wrapped response
+            products = response_data.get("products") or response_data
             if not isinstance(products, list):
                 passed = False
         except json.JSONDecodeError:
