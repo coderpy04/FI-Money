@@ -5,7 +5,7 @@ import {
     Navigate,
 } from "react-router-dom";
 import { ProductProvider } from "./context/ProductContext";
-import Login from "./pages/Login";
+import Login from "./pages/login";
 import Signup from "./pages/Signup";
 import Products from "./pages/Products";
 import AddProduct from "./pages/AddProduct";
