@@ -391,14 +391,6 @@ This project follows standard JavaScript conventions. Consider using ESLint and 
 - Rate limiting should be considered for production
 - Docker containers run with appropriate security settings
 
-## License
-
-This project is licensed under the ISC License.
-
-## Support
-
-If you encounter any issues or have questions, please create an issue in the repository.
-
 ---
 
 **Note**: Remember to add your `.env` file to `.gitignore` to avoid committing sensitive information to version control.
